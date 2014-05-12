@@ -1,0 +1,14 @@
+{
+    "server": {
+        "accessLog": "/var/log/hipache_access.log",
+        "port": {{HIPACHE_HTTP_PORT}},
+        "workers": {{HIPACHE_NUM_WORKERS}},
+        "maxSockets": {{HIPACHE_MAX_SOCKETS}},
+        "deadBackendTTL": {{HIPACHE_DEAD_BACKEND_TTL}},
+        "tcpTimeout": {{HIPACHE_TCP_TIMEOUT}},
+        "retryOnError": {{HIPACHE_RETRY_ON_ERROR}},
+        "deadBackendOn500": {{HIPACHE_DEAD_BACKEND_ON_500}},
+        "httpKeepAlive": {{HIPACHE_HTTP_KEEP_ALIVE}}
+    },
+    "driver": ["redis://{{REDIS_HOST}}:{{REDIS_PORT}}"]
+}
